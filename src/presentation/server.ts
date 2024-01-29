@@ -1,4 +1,5 @@
 import express, { Router } from 'express';
+import 'colors';
 
 interface Options {
     port: number;
@@ -33,7 +34,7 @@ export class Server {
         this.app.use(this.routes);
 
         this.app.listen(8080, () => {
-            console.log(`Server running on port ${this.port}`);
+            console.log('Server running on port:'.blue, `${this.port}`.yellow.bold);
         });
     };
 
