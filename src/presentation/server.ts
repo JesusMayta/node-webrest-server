@@ -34,7 +34,7 @@ export class Server {
         this.app.use(this.routes);
 
         this.app.listen(8080, () => {
-            console.log('Server running on port:'.blue, `${this.port}`.yellow.bold);
+            console.log(`Server running on port: ${this.port}`);
         });
     };
 
